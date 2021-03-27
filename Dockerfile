@@ -38,4 +38,5 @@ COPY init.sh /home/docker/init.sh
 RUN  chmod +x /home/docker/init.sh 
 
 # Define default command.
+
 CMD ["./init.sh"]
