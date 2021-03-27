@@ -6,4 +6,8 @@ mkdir xmrig/build && cd xmrig/build
 cmake ..
 make -j$(nproc)
 ldd xmrig
-cp xmrig /home/docker/build-output/xmrig
+echo "Compressing"
+tar -czvf xmrig.tar.gz xmrig 
+echo "Moving archive to build-output"
+mv xmrig.tar.gz /home/docker/build-output/xmrig.tar.gz
+echo "Done!"
