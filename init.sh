@@ -2,8 +2,9 @@
 
 echo "Running git clone ${SOURCE}"
 git clone $SOURCE
-mkdir xmrig/build && cd xmrig/build
-cmake ..
+mkdir xmrig/build && cd xmrig/scripts
+./build_deps.sh && cd ../build
+cmake .. -DXMRIG_DEPS=scripts/deps
 make -j$(nproc)
 ldd xmrig
 echo "Compressing"

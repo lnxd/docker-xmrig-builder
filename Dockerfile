@@ -15,7 +15,7 @@ RUN export DEBIAN_FRONTEND=noninteractive; \
 RUN export DEBIAN_FRONTEND=noninteractive;\
     apt-get update; \
     apt-get upgrade -y; \
-    apt-get install -y sudo apt-utils git build-essential cmake libuv1-dev libssl-dev libhwloc-dev; \
+    apt-get install -y sudo apt-utils git build-essential cmake automake libtool autoconf; \
     apt-get clean all; \
 
 # Prevent error messages when running sudo
