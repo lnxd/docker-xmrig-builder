@@ -33,6 +33,10 @@ ENV HOME /home/docker
 # Define working directory.
 WORKDIR /home/docker
 
+# Add init.sh
+COPY init.sh /home/docker/init.sh
+RUN  chmod +x /home/docker/init.sh 
+
 # Define default command.
 
-CMD ["init.sh"]
+CMD ["./init.sh"]
