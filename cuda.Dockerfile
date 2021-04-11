@@ -1,4 +1,4 @@
-FROM nvidia/cuda
+FROM nvidia/cuda:devel
 
 ENV SOURCE="https://github.com/xmrig/xmrig.git"
 
