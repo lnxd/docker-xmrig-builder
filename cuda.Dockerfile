@@ -1,4 +1,4 @@
-FROM nvidia/cuda:devel
+FROM nvidia/cuda:11.2.2-devel-ubuntu20.04
 
 ENV SOURCE="https://github.com/xmrig/xmrig.git"
 
